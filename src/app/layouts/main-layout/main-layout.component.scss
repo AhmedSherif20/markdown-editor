@@ -1,0 +1,21 @@
+.mat-sidenav-container {
+    mat-sidenav {
+        width: 350px;
+        position: fixed;
+        top: 64px;
+        bottom: 0;
+        height: calc(100vh - 64px);
+        // background-color: red;
+    }
+
+    mat-sidenav-content {
+
+        .content {
+            // position: fixed;
+            // top: 64px;
+            height: calc(100vh - 64px);
+            width: 100%;
+            overflow-y: scroll;
+        }
+    }
+}

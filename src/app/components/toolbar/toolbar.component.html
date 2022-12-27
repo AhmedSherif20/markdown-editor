@@ -1,0 +1,17 @@
+<mat-toolbar class=" align-items-center">
+    <h1 class="h2 mb-0 me-4">Markdown Editor</h1>
+    <evo-sidenav-btn></evo-sidenav-btn>
+    <span class="mat-spacer"></span>
+    <button mat-icon-button class="example-icon d-flex justify-content-center align-items-center"
+        [matMenuTriggerFor]="settingsMenu">
+        <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #settingsMenu="matMenu">
+        <button mat-menu-item>Default Review</button>
+        <button mat-menu-item>
+            Set Mode
+        </button>
+    </mat-menu>
+</mat-toolbar>
+
+<!-- (click)="changeEditorMode(darkMode2 ? 'light' : 'dark')" -->

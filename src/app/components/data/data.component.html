@@ -1,0 +1,17 @@
+<div class="con  py-3 px-2">
+    <div class="data" *ngIf="files && files.length > 0">
+        <span class=" d-inline-block bg-primary text-white px-3 py-2 rounded-3 h4">Files</span>
+        <div *ngFor="let item of files">
+            <evo-file [data]="item"></evo-file>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+
+    <div class="nodata" *ngIf="files && files.length == 0">
+        <ngb-alert [dismissible]="false" [type]="'info'">
+            <span class=" text-capitalize">
+                no files to display
+            </span>
+        </ngb-alert>
+    </div>
+</div>

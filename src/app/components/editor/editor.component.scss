@@ -1,0 +1,19 @@
+::ng-deep #fileContent {
+    height: calc(100vh - 200px) !important;
+}
+
+.file-name-input {
+    max-width: 100%;
+}
+
+
+.btns {
+    // background-color: red;
+    width: fit-content;
+
+    .btn-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,15 @@
+<evo-toolbar></evo-toolbar>
+
+<mat-sidenav-container class="mat-sidenav-container">
+    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="56">
+        <evo-search-file></evo-search-file>
+        <evo-data></evo-data>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

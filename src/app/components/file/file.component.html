@@ -1,0 +1,20 @@
+<section class="file d-flex justify-content-start align-items-center  py-3 px-1 mb-0"
+    [routerLink]="['/editor/file', data.id]" matRipple [matRippleCentered]="false" [matRippleDisabled]="false"
+    [matRippleUnbounded]="false">
+    <mat-icon class="me-2">
+        insert_drive_file
+    </mat-icon>
+    <h5 class="title mb-0">
+        {{data.name}}
+    </h5>
+
+    <span class="mat-spacer"></span>
+
+
+    <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="deleteFile(data.id)">
+            <span>Delete File</span>
+        </button>
+    </mat-menu>
+</section>
