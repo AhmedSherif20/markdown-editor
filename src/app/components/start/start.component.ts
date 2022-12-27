@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 import { SidenavService } from 'src/app/services/sidenav.service';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss'],
 })
-export class StartComponent implements OnInit {
+export class StartComponent implements OnInit, OnDestroy {
   subs: Subscription[] = [];
 
   newUser: boolean = true;
@@ -33,5 +33,9 @@ export class StartComponent implements OnInit {
 
   chooseFile() {
     this.sidenavService.open();
+  }
+
+  ngOnDestroy(): void {
+    if (this.subs.length) this.subs.forEach((ele) => ele.unsubscribe());
   }
 }
