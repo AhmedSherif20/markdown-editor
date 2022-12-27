@@ -1,13 +1,14 @@
 <section id="start">
     <div class="container text-center py-5">
-        <img src="../../../assets/images/Typing-bro.svg" class="img-fluid banner mx-auto" alt="Markdown online order"
+        <img src="assets/images/Typing-bro.svg" class="img-fluid banner mx-auto" alt="Markdown online order"
             title="Markdown online order">
         <h2 class="h1 mb-4">
             Edit Your Markdown File Easily
         </h2>
         <div class="btns d-flex justify-content-center align-items-center">
             <button type="button" class="btn btn-dark me-3" (click)="createFile()">Create New File</button>
-            <button type="button" class="btn btn-dark" (click)="chooseFile()">Choose From Your Files</button>
+            <button type="button" class="btn btn-dark" (click)="chooseFile()" *ngIf="newUser">Choose From Your
+                Files</button>
         </div>
     </div>
 </section>

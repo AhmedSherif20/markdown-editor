@@ -56,12 +56,13 @@ export class DataService {
     }
   }
 
-  // read
+  // read all
   getAllFiles(): void {
     let dataJson = JSON.parse(localStorage.getItem(this.databaseName) || '[]');
     this.filesData.next(dataJson);
   }
 
+  // read one by
   getFileById(id: string): File | any {
     let allFiles = this.filesData.getValue();
     let currentFile = allFiles.find((ele) => ele.id == id);
@@ -74,6 +75,7 @@ export class DataService {
     }
   }
 
+  //  read search file
   searchFile(name: string): void {
     let allFiles = JSON.parse(localStorage.getItem(this.databaseName) || '[]');
     let foundFiles = allFiles.filter(
